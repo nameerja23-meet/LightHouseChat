@@ -2,6 +2,7 @@ package com.example.chatapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.chatapp.R;
@@ -18,6 +19,11 @@ public class QuestionsActivity extends AppCompatActivity {
         binding = ActivityQuestionsBinding.inflate(getLayoutInflater());
         preferenceManager = new PreferenceManager(getApplicationContext());
         setContentView(binding.getRoot());
+        setListeners();
+    }
+
+    private void setListeners(){
+        binding.buttonSubmit.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), UsersActivity.class)));
     }
 
 
