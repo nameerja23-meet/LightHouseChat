@@ -1,6 +1,5 @@
 package com.example.chatapp.activities;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -39,7 +38,7 @@ public class HomeActivity extends AppCompatActivity {
     private void setListeners() {
         binding.imageSignOut.setOnClickListener(v -> signOut());
         binding.buttonChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), QuestionsActivity.class)));
-        binding.buttonAboutUs.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), About_us.class)));
+        binding.buttonAboutUs.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), AboutUsActivity.class)));
 
 
     }
