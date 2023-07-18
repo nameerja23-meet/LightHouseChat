@@ -38,7 +38,10 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setListeners() {
         binding.imageSignOut.setOnClickListener(v -> signOut());
-        binding.fabNewChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), UsersActivity.class)));
+        binding.buttonChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), QuestionsActivity.class)));
+        binding.buttonAboutUs.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), About_us.class)));
+
+
     }
 
     private void loadUserDetails() {
