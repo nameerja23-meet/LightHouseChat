@@ -72,7 +72,7 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:id="@+id/go_to_survey_button"
+                android:id="@+id/buttonSurvey"
                 android:layout_width="330px"
                 android:layout_height="330px"
                 android:background="@drawable/round_button"
@@ -84,7 +84,7 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/open_chat_button"
+                android:id="@+id/buttonChat"
                 android:layout_width="330px"
                 android:layout_height="330px"
                 android:elevation="20px"
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:id="@+id/about_us_button"
+                android:id="@+id/buttonAboutUs"
                 android:layout_width="330px"
                 android:elevation="20px"
                 android:layout_alignParentLeft="true"
@@ -145,7 +145,7 @@
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/forum_button"
+                android:id="@+id/buttonForum"
                 android:layout_width="330px"
                 android:layout_height="330px"
                 android:layout_alignParentRight="true"
