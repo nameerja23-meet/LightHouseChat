@@ -33,6 +33,8 @@ public class HomeActivity extends AppCompatActivity {
         loadUserDetails();
         getToken();
         setListeners();
+
+
     }
 
     private void setListeners() {
@@ -41,9 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         binding.buttonAboutUs.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), AboutUsActivity.class)));
         binding.buttonForum.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),ForumDisplayActivity.class)));
         binding.buttonSurvey.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),CreateForumActivity.class)));
-
-
-
+        binding.buttonAI.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), AIChatActivity.class)));
     }
 
     private void loadUserDetails() {
