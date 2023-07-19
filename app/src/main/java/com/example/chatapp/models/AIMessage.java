@@ -1,6 +1,6 @@
-package com.example.chatapp.activities;
+package com.example.chatapp.models;
 
-public class Message {
+public class AIMessage {
     public static String SENT_BY_ME = "me";
     public static String SENT_BY_BOT="bot";
 
@@ -23,7 +23,7 @@ public class Message {
         this.sentBy = sentBy;
     }
 
-    public Message(String message, String sentBy) {
+    public AIMessage(String message, String sentBy) {
         this.message = message;
         this.sentBy = sentBy;
     }

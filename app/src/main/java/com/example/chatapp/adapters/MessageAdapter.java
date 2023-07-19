@@ -1,4 +1,4 @@
-package com.example.chatapp.activities;
+package com.example.chatapp.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,12 +10,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.chatapp.R;
+import com.example.chatapp.models.AIMessage;
 
 import java.util.List;
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHolder> {
-    List<Message> messageList;
-    public MessageAdapter(List<Message> messageList) {
+    List<AIMessage> messageList;
+    public MessageAdapter(List<AIMessage> messageList) {
         this.messageList = messageList;
     }
 
@@ -29,8 +30,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Message message = messageList.get(position);
-        if (message.getSentBy().equals(Message.SENT_BY_ME)){
+        AIMessage message = messageList.get(position);
+        if (message.getSentBy().equals(AIMessage.SENT_BY_ME)){
             holder.leftChatView.setVisibility(View.GONE);
             holder.rightChatView.setVisibility(View.VISIBLE);
             holder.rightTextView.setText(message.getMessage());

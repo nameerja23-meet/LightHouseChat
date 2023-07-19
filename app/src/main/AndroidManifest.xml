@@ -59,10 +59,10 @@
             android:name=".activities.AIChatActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.Message"
+            android:name=".models.AIMessage"
             android:exported="false" />
         <activity
-        android:name=".activities.MessageAdapter"
+        android:name=".adapters.MessageAdapter"
         android:exported="false" />
 
 

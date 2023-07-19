@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.chatapp.R;
+import com.example.chatapp.adapters.MessageAdapter;
+import com.example.chatapp.models.AIMessage;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,11 +25,11 @@ import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import okhttp3.MediaType;
 
 
 public class AIChatActivity extends AppCompatActivity {
@@ -35,7 +37,7 @@ public class AIChatActivity extends AppCompatActivity {
     TextView welcomeTextView;
     EditText messageEditText;
     ImageButton sendButton;
-    List<Message> messageList;
+    List<AIMessage> AIMessageList;
     MessageAdapter messageAdapter;
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
@@ -46,14 +48,14 @@ public class AIChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aichat);
-        messageList = new ArrayList<>();
+        AIMessageList = new ArrayList<>();
 
         recyclerView = findViewById(R.id.recycler_view);
         welcomeTextView = findViewById(R.id.welcome_text);
         messageEditText = findViewById(R.id.message_edit_text);
         sendButton = findViewById(R.id.send_btn);
 
-        messageAdapter = new MessageAdapter(messageList);
+        messageAdapter = new MessageAdapter(AIMessageList);
         recyclerView.setAdapter(messageAdapter);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setStackFromEnd(true);
@@ -62,7 +64,7 @@ public class AIChatActivity extends AppCompatActivity {
 
         sendButton.setOnClickListener((v)->{
             String question = messageEditText.getText().toString().trim();
-            addToChat(question,Message.SENT_BY_ME);
+            addToChat(question, AIMessage.SENT_BY_ME);
             messageEditText.setText("");
             callAPI(question);
             welcomeTextView.setVisibility(View.GONE);
@@ -74,7 +76,7 @@ public class AIChatActivity extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                messageList.add(new Message(message,sentBy));
+                AIMessageList.add(new AIMessage(message,sentBy));
                 messageAdapter.notifyDataSetChanged();
                 recyclerView.smoothScrollToPosition(messageAdapter.getItemCount());
 
@@ -84,16 +86,16 @@ public class AIChatActivity extends AppCompatActivity {
     }
 
     void addResponse(String response){
-        messageList.remove(messageList.size()-1);
-        addToChat(response,Message.SENT_BY_BOT);
+        AIMessageList.remove(AIMessageList.size()-1);
+        addToChat(response, AIMessage.SENT_BY_BOT);
 
 
     }
 
     void callAPI(String question){
-        messageList.add(new Message("Typing...",Message.SENT_BY_BOT));
-        messageAdapter.notifyItemInserted(messageList.size() - 1);
-        recyclerView.smoothScrollToPosition(messageList.size() - 1);
+        AIMessageList.add(new AIMessage("Typing...", AIMessage.SENT_BY_BOT));
+        messageAdapter.notifyItemInserted(AIMessageList.size() - 1);
+        recyclerView.smoothScrollToPosition(AIMessageList.size() - 1);
 
 
         JSONObject jsonBody = new JSONObject();
