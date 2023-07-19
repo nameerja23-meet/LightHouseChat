@@ -43,6 +43,7 @@
         android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_8sdp"
         android:ellipsize="end"
+        android:fontFamily="@font/average_sans"
         android:gravity="center"
         android:maxLines="1"
         android:textColor="@color/white"
@@ -51,7 +52,7 @@
         app:layout_constraintBottom_toBottomOf="@id/imageProfile"
         app:layout_constraintEnd_toStartOf="@id/imageSignOut"
         app:layout_constraintStart_toEndOf="@id/imageProfile"
-        app:layout_constraintTop_toTopOf="@id/imageProfile"/>
+        app:layout_constraintTop_toTopOf="@id/imageProfile" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -66,8 +67,8 @@
             android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:paddingRight="80px"
-            android:paddingLeft="80px"
+            android:paddingRight="@dimen/_28sdp"
+            android:paddingLeft="@dimen/_28sdp"
             android:paddingTop="160px"
             android:paddingBottom="30px"
             android:layout_height="wrap_content">
@@ -101,8 +102,8 @@
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:paddingRight="170px"
-            android:paddingLeft="225px"
+            android:paddingRight="@dimen/_48sdp"
+            android:paddingLeft="@dimen/_70sdp"
             android:layout_alignParentLeft="true"
             android:layout_height="wrap_content">
 
@@ -110,6 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="150px"
                 android:layout_alignParentLeft="true"
+                android:fontFamily="@font/average_sans"
                 android:gravity="center"
                 android:text="AI"
                 android:textColor="@color/black"
@@ -119,6 +121,7 @@
                 android:layout_width="200px"
                 android:layout_height="150px"
                 android:layout_alignParentRight="true"
+                android:fontFamily="@font/average_sans"
                 android:gravity="center"
                 android:text="CHAT"
                 android:textColor="@color/black"
@@ -128,9 +131,10 @@
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:paddingRight="80px"
-            android:paddingLeft="80px"
-            android:paddingTop="140px"
+
+            android:paddingRight="@dimen/_28sdp"
+            android:paddingLeft="@dimen/_28sdp"
+            android:paddingTop="@dimen/_40sdp"
             android:paddingBottom="30px"
             android:layout_height="wrap_content">
 
@@ -162,8 +166,8 @@
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:paddingRight="170px"
-            android:paddingLeft="180px"
+            android:paddingRight="@dimen/_45sdp"
+            android:paddingLeft="@dimen/_45sdp"
             android:layout_alignParentLeft="true"
             android:layout_height="wrap_content">
 
@@ -171,6 +175,7 @@
                 android:layout_width="200px"
                 android:layout_height="150px"
                 android:layout_alignParentLeft="true"
+                android:fontFamily="@font/average_sans"
                 android:gravity="center"
                 android:text="ABOUT US"
                 android:textColor="@color/black"
@@ -180,6 +185,7 @@
                 android:layout_width="200px"
                 android:layout_height="150px"
                 android:layout_alignParentRight="true"
+                android:fontFamily="@font/average_sans"
                 android:gravity="center"
                 android:text="FORUM"
                 android:textColor="@color/black"

@@ -12,44 +12,46 @@
         android:id="@+id/recycler_view"
         android:layout_above="@+id/bottom_layout"
         />
+
     <TextView
+        android:id="@+id/welcome_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/welcome_text"
         android:layout_centerInParent="true"
-        android:text="Aurora"
+        android:fontFamily="@font/average_sans"
         android:gravity="center"
-        android:textSize="38dp"
-        />
+        android:text="Aurora"
+        android:textSize="38dp" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:padding="8dp"
         android:id="@+id/bottom_layout">
+
         <EditText
+            android:id="@+id/message_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/message_edit_text"
             android:layout_centerInParent="true"
-            android:hint="Write here"
-            android:padding="16dp"
             android:layout_toLeftOf="@+id/send_btn"
             android:background="@drawable/rounded_corner"
-            />
+            android:fontFamily="@font/average_sans"
+            android:hint="Write here"
+            android:padding="16dp" />
+
         <ImageButton
+            android:id="@+id/send_btn"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-            android:id="@+id/send_btn"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
-            android:padding="8dp"
-            android:contentDescription=""
-            android:src="@drawable/baseline_send_24"
             android:background="?attr/selectableItemBackgroundBorderless"
-            />
+            android:contentDescription=""
+            android:padding="8dp"
+            android:src="@drawable/baseline_send_24"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
 
     </RelativeLayout>
