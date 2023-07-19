@@ -6,9 +6,17 @@
     android:layout_height="match_parent"
     android:clipToPadding="false"
     android:overScrollMode="never"
+<<<<<<< Updated upstream
     android:padding="@dimen/_24sdp"
     android:scrollbars="none"
     tools:context=".activities.QuestionsActivity">
+=======
+    android:background="@color/white"
+    android:padding="@dimen/_24sdp"
+    android:scrollbars="none"
+    tools:context=".activities.QuestionsActivity">
+
+>>>>>>> Stashed changes
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +25,10 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,6 +64,9 @@
             android:textStyle="bold"
             app:cornerRadius="@dimen/_8sdp"/>
     </LinearLayout>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
     </androidx.constraintlayout.widget.ConstraintLayout>
