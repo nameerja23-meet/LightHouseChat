@@ -46,6 +46,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.AIChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Message"
+            android:exported="false" />
+        <activity
+        android:name=".activities.MessageAdapter"
+        android:exported="false" />
+
 
         <service
             android:name=".firebase.MessagingService"

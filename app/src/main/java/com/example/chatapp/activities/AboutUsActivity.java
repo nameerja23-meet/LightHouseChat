@@ -3,27 +3,40 @@ package com.example.chatapp.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.chatapp.R;
+import com.example.chatapp.databinding.ActivityAboutUsBinding;
+import com.example.chatapp.utilities.Constants;
+import com.example.chatapp.utilities.PreferenceManager;
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.binary.Base64;
 
 public class AboutUsActivity extends AppCompatActivity {
 
+    private ActivityAboutUsBinding binding;
+    private PreferenceManager preferenceManager;
     @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_about_us);
-
-            Button back= findViewById(R.id.about_to_home_button);
-            back.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(AboutUsActivity.this, HomeActivity.class);
-                    startActivity(i);
-                    finish();}
-                });
+            binding = ActivityAboutUsBinding.inflate(getLayoutInflater());
+            setContentView(binding.getRoot());
+            preferenceManager = new PreferenceManager(getApplicationContext());
+            loadUserDetails();
+            setListeners();
         }
+
+
+    private void setListeners() {
+        binding.imageBack.setOnClickListener(view -> onBackPressed());
+    }
+    private void loadUserDetails() {
+        binding.textUsername.setText(preferenceManager.getString(Constants.KEY_USERNAME));
+        byte[] bytes = Base64.decodeBase64(preferenceManager.getString(Constants.KEY_IMAGE));
+        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        //binding.imageProfile.setImageBitmap(bitmap);
+    }
     }

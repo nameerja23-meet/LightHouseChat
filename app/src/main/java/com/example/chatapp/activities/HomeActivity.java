@@ -33,13 +33,15 @@ public class HomeActivity extends AppCompatActivity {
         loadUserDetails();
         getToken();
         setListeners();
+
+
     }
 
     private void setListeners() {
         binding.imageSignOut.setOnClickListener(v -> signOut());
         binding.buttonChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), QuestionsActivity.class)));
         binding.buttonAboutUs.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), AboutUsActivity.class)));
-
+        binding.buttonAI.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), AIChatActivity.class)));
 
     }
 
