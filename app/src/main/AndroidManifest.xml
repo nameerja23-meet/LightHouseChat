@@ -26,9 +26,6 @@
             android:name=".activities.CreateForumActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.ForumViewActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.AboutUsActivity"
             android:exported="false" />
         <activity
