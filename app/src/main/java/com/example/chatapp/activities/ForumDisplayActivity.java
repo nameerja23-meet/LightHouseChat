@@ -1,5 +1,6 @@
     package com.example.chatapp.activities;
 
+    import android.content.Intent;
     import android.os.Bundle;
     import android.view.View;
     import android.widget.Toast;
@@ -22,29 +23,24 @@
     import java.util.ArrayList;
     import java.util.List;
 
+
     public class ForumDisplayActivity extends AppCompatActivity {
 
         private ActivityDisplayBinding binding;
-        private PreferenceManager preferenceManager;
-        private PostAdapter adapter;
-        private List<Post> posts;
         private FirebaseFirestore database;
-        private CollectionReference postsCollection;
-
+        private PreferenceManager preferenceManager;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             binding = ActivityDisplayBinding.inflate(getLayoutInflater());
             setContentView(binding.getRoot());
-            posts = new ArrayList<>();
-            adapter = new PostAdapter(posts);
-            binding.postsRecyclerView.setAdapter(adapter);
-
             // Initialize Firestore
             database = FirebaseFirestore.getInstance();
-            postsCollection = database.collection("Documents");
+            preferenceManager = new PreferenceManager(getApplicationContext());
+            binding.textUsername.setText(preferenceManager.getString(Constants.KEY_USERNAME));
             // Retrieve user posts
             retrievePosts();
+            setListeners();
         }
 
         private void retrievePosts() {
@@ -58,7 +54,7 @@
                                 post.username = queryDocumentSnapshot.getString(Constants.KEY_USERNAME);
                                 post.title = queryDocumentSnapshot.getString(Constants.KEY_TITLE);
                                 post.content = queryDocumentSnapshot.getString(Constants.KEY_CONTENT);
-
+                                post.image = queryDocumentSnapshot.getString(Constants.KEY_IMAGE);
                                 posts.add(post);
                             }
                             if (posts.size()>0){
@@ -71,24 +67,11 @@
                         }
                     });
         }
-//        private void retrievePosts() {
-//            postsCollection.get().addOnCompleteListener(task -> {
-//                if (task.isSuccessful() && task.getResult() != null) {
-//                    List<Post> posts = new ArrayList<>();
-//                    QuerySnapshot querySnapshot = task.getResult();
-//                    if (querySnapshot != null) {
-//                        for (QueryDocumentSnapshot documentSnapshot : querySnapshot) {
-//                            Post post = new Post();
-//                            //post.title =
-//                        }
-//                    }
-//                    adapter.setPosts(posts);
-//                } else {
-//                    showToast("Failed to retrieve posts");
-//                }
-//            });
-//        }
         private void showErrorMessage() {
             binding.textErrorMessage.setText(String.format("%$, ","No posts available"));
+        }
+        private void setListeners(){
+            binding.imageBack.setOnClickListener(v -> onBackPressed());
+            binding.fabNewChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CreateForumActivity.class)));
         }
     }
