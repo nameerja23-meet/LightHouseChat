@@ -2,8 +2,11 @@ package com.example.chatapp.utilities;
 
 public class Constants {
     public static final String KEY_COLLECTION_USERS ="users";
+    public static final String KEY_COLLECTION_POSTS="posts";
     public static final String KEY_USERNAME = "username";
     public static final String KEY_PASSWORD = "password";
+    public static final String KEY_TITLE= "title";
+    public static final String KEY_CONTENT= "content";
     public static final String KEY_PREFERENCE_NAME = "chatAppPreference";
     public static final String KEY_IS_SIGNED_IN = "isSignedIn";
     public static final String KEY_USER_ID = "userId";

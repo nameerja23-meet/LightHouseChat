@@ -6,17 +6,16 @@
     android:layout_height="match_parent"
     android:clipToPadding="false"
     android:overScrollMode="never"
-<<<<<<< Updated upstream
+    android:background="@color/primary"
     android:padding="@dimen/_24sdp"
     android:scrollbars="none"
     tools:context=".activities.QuestionsActivity">
-=======
-    android:background="@color/white"
-    android:padding="@dimen/_24sdp"
-    android:scrollbars="none"
-    tools:context=".activities.QuestionsActivity">
-
->>>>>>> Stashed changes
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/background_content_bottom"
+        app:layout_constraintBottom_toBottomOf="parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,15 +24,21 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
-<<<<<<< Updated upstream
-=======
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="For us to provide you the best match possible,"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"/>
 
->>>>>>> Stashed changes
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
-        android:text="@string/what_would_you_like_to_talk_about"
+        android:text="For what purpose did you join Lighthouse?"
+        android:gravity="center"
         android:textColor="@color/primary_text"
         android:textSize="@dimen/_30ssp"
         android:textStyle="bold"/>
@@ -64,9 +69,7 @@
             android:textStyle="bold"
             app:cornerRadius="@dimen/_8sdp"/>
     </LinearLayout>
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
+    </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

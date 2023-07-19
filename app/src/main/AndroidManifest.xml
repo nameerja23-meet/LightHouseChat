@@ -17,6 +17,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ForumDisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapters.PostAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CreateForumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ForumViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.AboutUsActivity"
             android:exported="false" />
         <activity
@@ -46,6 +58,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.AIChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Message"
+            android:exported="false" />
+        <activity
+        android:name=".activities.MessageAdapter"
+        android:exported="false" />
+
 
         <service
             android:name=".firebase.MessagingService"
