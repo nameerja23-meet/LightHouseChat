@@ -80,7 +80,7 @@
                 android:contentDescription=""
                 app:backgroundTint="@null"
                 android:layout_alignParentLeft="true"
-                app:srcCompat="@drawable/ic_action_name"
+                app:srcCompat="@drawable/survey_icon"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
