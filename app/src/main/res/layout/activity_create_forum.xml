@@ -34,11 +34,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="Create a post!"
+            android:fontFamily="@font/average_sans"
             android:gravity="center"
             android:paddingLeft="@dimen/_20sdp"
-            android:textSize="@dimen/_20sdp"
-            android:textColor="@color/white"></TextView>
+            android:text="Create a post!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"></TextView>
 
     </RelativeLayout>
         <FrameLayout
@@ -54,41 +55,43 @@
                 android:orientation="vertical">
 
 
-            <EditText
-                android:layout_width="match_parent"
-                android:id="@+id/inputTitle"
-                android:layout_height="wrap_content"
-                android:hint="Enter title"
-                android:paddingBottom="@dimen/_20ssp"
-                android:paddingTop="@dimen/_40sdp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="@dimen/_19sdp"></EditText>
+                <EditText
+                    android:id="@+id/inputTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/average_sans"
+                    android:hint="Enter title"
+                    android:paddingTop="@dimen/_40sdp"
+                    android:paddingBottom="@dimen/_20ssp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/_19sdp"></EditText>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:id="@+id/inputContent"
-                android:layout_height="wrap_content"
-                android:paddingTop="@dimen/_20sdp"
-                android:hint="Tell your story here"
-                android:paddingBottom="@dimen/_250sdp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="@dimen/_19sdp"></EditText>
+                <EditText
+                    android:id="@+id/inputContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/average_sans"
+                    android:hint="Tell your story here"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_250sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/_19sdp"></EditText>
 
 
-
-            <Button
-                android:id="@+id/buttonSubmitPost"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:backgroundTint="@color/primary"
-                android:text="@string/submit"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_13ssp"
-                android:textStyle="bold"
-                app:cornerRadius="@dimen/_8sdp" />
+                <Button
+                    android:id="@+id/buttonSubmitPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:backgroundTint="@color/primary"
+                    android:fontFamily="@font/average_sans"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/_8sdp" />
             </LinearLayout>
 
         </FrameLayout>

@@ -6,17 +6,9 @@
     android:layout_height="match_parent"
     android:clipToPadding="false"
     android:overScrollMode="never"
-    android:background="@color/primary"
     android:padding="@dimen/_24sdp"
     android:scrollbars="none"
     tools:context=".activities.QuestionsActivity">
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:background="@drawable/background_content_bottom"
-        app:layout_constraintBottom_toBottomOf="parent">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,52 +16,47 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15sdp"
-            android:text="For us to provide you the best match possible,"
+            android:fontFamily="@font/average_sans"
+            android:gravity="center"
+            android:text="For what purpose did you join Lighthouse?"
             android:textColor="@color/primary_text"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"/>
+            android:textSize="@dimen/_30ssp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:text="For what purpose did you join Lighthouse?"
-        android:gravity="center"
-        android:textColor="@color/primary_text"
-        android:textSize="@dimen/_30ssp"
-        android:textStyle="bold"/>
-    <EditText
-        android:id="@+id/inputUsername"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_200sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:background="@drawable/background_input"
-        android:hint="Type something..."
-        android:imeOptions="actionNext"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:paddingStart="@dimen/_16sdp"
-        android:paddingEnd="@dimen/_16sdp"
-        android:textColor="@color/primary_text"
-        android:textSize="@dimen/_13ssp"
-        />
+        <EditText
+            android:id="@+id/inputUsername"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_input"
+            android:fontFamily="@font/average_sans"
+            android:hint="Type something..."
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_13ssp" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSubmit"
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/_10sdp"
             android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/average_sans"
             android:text="@string/submit"
             android:textColor="@color/white"
-            android:backgroundTint="@color/primary"
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold"
-            app:cornerRadius="@dimen/_8sdp"/>
+            app:cornerRadius="@dimen/_8sdp" />
     </LinearLayout>
 
-    </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

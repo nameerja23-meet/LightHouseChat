@@ -110,6 +110,8 @@
                 android:layout_height="@dimen/_50sdp"
                 android:text="@string/create_account"
                 android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:hint="@null"
                 android:textSize="@dimen/_13ssp"
                 android:textStyle="bold"
                 app:cornerRadius="@dimen/_8sdp"/>
