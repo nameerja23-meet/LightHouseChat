@@ -29,7 +29,7 @@
             android:name=".activities.ForumViewActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.About_us"
+            android:name=".activities.AboutUsActivity"
             android:exported="false" />
         <activity
             android:name=".activities.QuestionsActivity"

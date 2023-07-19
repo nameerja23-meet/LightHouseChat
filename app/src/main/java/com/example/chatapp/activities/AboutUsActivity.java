@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.example.chatapp.R;
 
-public class About_us extends AppCompatActivity {
+public class AboutUsActivity extends AppCompatActivity {
 
     @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class About_us extends AppCompatActivity {
 
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(About_us.this, HomeActivity.class);
+                    Intent i = new Intent(AboutUsActivity.this, HomeActivity.class);
                     startActivity(i);
                     finish();}
                 });
