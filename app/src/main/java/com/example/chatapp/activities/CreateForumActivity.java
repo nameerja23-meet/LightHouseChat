@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -63,6 +64,8 @@ public class CreateForumActivity extends AppCompatActivity {
             HashMap<String, Object> post = new HashMap<>();
             post.put(Constants.KEY_TITLE, binding.inputTitle.getText().toString());
             post.put(Constants.KEY_CONTENT, binding.inputContent.getText().toString());
+            post.put(Constants.KEY_TIMESTAMP, new Date());
+            post.put(Constants.KEY_TIMESTAMP, Constants.KEY_IMAGE);
             database.collection(Constants.KEY_COLLECTION_POSTS)
                     .add(post)
                     .addOnSuccessListener(documentReference -> {
@@ -77,25 +80,6 @@ public class CreateForumActivity extends AppCompatActivity {
 
     private void setListeners(){
         binding.buttonSubmitPost.setOnClickListener(v -> createPost());
+        binding.imageBack.setOnClickListener(v -> onBackPressed());
     }
-//    private void upLoadData(String title, String post) {
-//        String id = UUID.randomUUID().toString();
-//        Map<String, Object> doc = new HashMap<>();
-//        doc.put("id", id);
-//        doc.put("postTitle", title);
-//        doc.put("postContent", post);
-//        database.collection("Documents").document(id).set(doc)
-//                .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<Void> task) {
-//                        // Handle the completion of the upload task if needed
-//                    }
-//                })
-//                .addOnFailureListener(new OnFailureListener() {
-//                    @Override
-//                    public void onFailure(@NonNull Exception e) {
-//                        // Handle the failure of the upload task if needed
-//                    }
-//                });
-//    }
 }

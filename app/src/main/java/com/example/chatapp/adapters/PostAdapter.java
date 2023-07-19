@@ -1,5 +1,7 @@
 package com.example.chatapp.adapters;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -8,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.chatapp.databinding.ItemPostBinding;
 import com.example.chatapp.models.Post;
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.binary.Base64;
 
 import java.util.List;
 

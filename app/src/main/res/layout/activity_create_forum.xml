@@ -19,7 +19,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/buttonBackFromForum"
+            android:id="@+id/imageBack"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_60sdp"
             android:background="@drawable/background_forum_button"
