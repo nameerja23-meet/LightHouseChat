@@ -3,22 +3,16 @@
     import android.content.Intent;
     import android.os.Bundle;
     import android.view.View;
-    import android.widget.Toast;
 
     import androidx.appcompat.app.AppCompatActivity;
-    import androidx.recyclerview.widget.RecyclerView;
 
-    import com.example.chatapp.R;
     import com.example.chatapp.adapters.PostAdapter;
     import com.example.chatapp.databinding.ActivityDisplayBinding;
     import com.example.chatapp.models.Post;
-    import com.example.chatapp.models.User;
     import com.example.chatapp.utilities.Constants;
     import com.example.chatapp.utilities.PreferenceManager;
-    import com.google.firebase.firestore.CollectionReference;
     import com.google.firebase.firestore.FirebaseFirestore;
     import com.google.firebase.firestore.QueryDocumentSnapshot;
-    import com.google.firebase.firestore.QuerySnapshot;
 
     import java.util.ArrayList;
     import java.util.List;

@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.chatapp.databinding.ItemContainerUserBinding;
 import com.example.chatapp.listeners.UserListener;
 import com.example.chatapp.models.User;
-import com.example.chatapp.utilities.Constants;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.binary.Base64;
 
 import java.util.List;

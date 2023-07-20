@@ -1,15 +1,11 @@
 package com.example.chatapp.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-import com.example.chatapp.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.chatapp.databinding.ActivityAboutUsBinding;
 import com.example.chatapp.utilities.Constants;
 import com.example.chatapp.utilities.PreferenceManager;
