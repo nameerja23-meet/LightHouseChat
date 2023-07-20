@@ -1,28 +1,17 @@
 package com.example.chatapp.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.chatapp.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.chatapp.databinding.ActivityCreateForumBinding;
 import com.example.chatapp.utilities.Constants;
 import com.example.chatapp.utilities.PreferenceManager;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 
 public class CreateForumActivity extends AppCompatActivity {
     private ActivityCreateForumBinding binding;
@@ -39,20 +28,6 @@ public class CreateForumActivity extends AppCompatActivity {
         setListeners();
 
     }
-
-//        submitPost.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String postTitle = postTitleEditText.getText().toString();
-//                String postContent = postContentEditText.getText().toString();
-//                upLoadData(postTitle, postContent);
-//                Intent i = new Intent(CreateForumActivity.this, ForumDisplayActivity.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
-//    }
-
 
     private void showToast(String message) {
             Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
