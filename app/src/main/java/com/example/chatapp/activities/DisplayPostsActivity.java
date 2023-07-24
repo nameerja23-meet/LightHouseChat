@@ -18,7 +18,7 @@
     import java.util.List;
 
 
-    public class ForumDisplayActivity extends AppCompatActivity {
+    public class DisplayPostsActivity extends AppCompatActivity {
 
         private ActivityDisplayBinding binding;
         private FirebaseFirestore database;
@@ -66,6 +66,6 @@
         }
         private void setListeners(){
             binding.imageBack.setOnClickListener(v -> onBackPressed());
-            binding.fabNewChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CreateForumActivity.class)));
+            binding.fabNewChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CreatePostActivity.class)));
         }
     }

@@ -41,7 +41,7 @@ public class HomeActivity extends AppCompatActivity {
         binding.imageSignOut.setOnClickListener(v -> signOut());
         binding.buttonChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), QuestionsActivity.class)));
         binding.buttonAboutUs.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), AboutUsActivity.class)));
-        binding.buttonForum.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),ForumDisplayActivity.class)));
+        binding.buttonForum.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), DisplayPostsActivity.class)));
         binding.buttonAI.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), AIChatActivity.class)));
     }
 

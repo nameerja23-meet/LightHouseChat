@@ -13,7 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.Date;
 import java.util.HashMap;
 
-public class CreateForumActivity extends AppCompatActivity {
+public class CreatePostActivity extends AppCompatActivity {
     private ActivityCreateForumBinding binding;
     private PreferenceManager preferenceManager;
     FirebaseFirestore database;
