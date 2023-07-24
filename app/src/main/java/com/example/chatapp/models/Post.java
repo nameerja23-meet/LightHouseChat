@@ -4,6 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Post implements Serializable {
-        public String title, content, username, dateTime, image;
-        public Date dateObject;
-        }
+        public String title, content, username, image, dateTime;
+        public Date dateObject;  // Add this line
+}
