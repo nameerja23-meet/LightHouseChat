@@ -22,13 +22,14 @@
             android:id="@+id/imageBack"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_60sdp"
-            android:background="@drawable/background_forum_button"
+            android:background="@drawable/background_icon"
             android:contentDescription=""
             android:elevation="20px"
             app:backgroundTint="@null"
             android:layout_alignParentLeft="true"
-            app:srcCompat="@drawable/ic_back_forum"
-            tools:ignore="SpeakableTextPresentCheck"></ImageButton>
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:tint="@color/white"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -39,7 +40,7 @@
             android:paddingLeft="@dimen/_20sdp"
             android:text="Create a post!"
             android:textColor="@color/white"
-            android:textSize="@dimen/_20sdp"></TextView>
+            android:textSize="@dimen/_20sdp"/>
 
     </RelativeLayout>
         <FrameLayout
@@ -65,7 +66,7 @@
                     android:paddingBottom="@dimen/_20ssp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
-                    android:textSize="@dimen/_19sdp"></EditText>
+                    android:textSize="@dimen/_19sdp"/>
 
                 <EditText
                     android:id="@+id/inputContent"
@@ -77,7 +78,7 @@
                     android:paddingBottom="@dimen/_250sdp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
-                    android:textSize="@dimen/_19sdp"></EditText>
+                    android:textSize="@dimen/_19sdp"/>
 
 
                 <Button

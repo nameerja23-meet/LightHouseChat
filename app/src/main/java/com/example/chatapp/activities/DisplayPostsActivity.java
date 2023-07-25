@@ -7,17 +7,20 @@
     import androidx.appcompat.app.AppCompatActivity;
 
     import com.example.chatapp.adapters.PostAdapter;
+    import com.example.chatapp.databinding.ActivityDisplayBinding;
     import com.example.chatapp.models.Post;
     import com.example.chatapp.utilities.Constants;
     import com.example.chatapp.utilities.PreferenceManager;
     import com.google.firebase.firestore.FirebaseFirestore;
     import com.google.firebase.firestore.QueryDocumentSnapshot;
 
+
     import java.text.SimpleDateFormat;
     import java.util.ArrayList;
     import java.util.Date;
     import java.util.List;
     import java.util.Locale;
+
 
 
     public class DisplayPostsActivity extends AppCompatActivity {
@@ -53,6 +56,7 @@
                                 post.image = queryDocumentSnapshot.getString(Constants.KEY_IMAGE);
                                 post.dateTime = getReadableDateTime(queryDocumentSnapshot.getDate(Constants.KEY_TIMESTAMP));
                                 post.dateObject = queryDocumentSnapshot.getDate(Constants.KEY_TIMESTAMP);
+
                                 posts.add(post);
                             }
                             if (posts.size()>0){
