@@ -2,13 +2,11 @@
 
     import android.content.Intent;
     import android.os.Bundle;
-    import android.util.Log;
     import android.view.View;
 
     import androidx.appcompat.app.AppCompatActivity;
 
     import com.example.chatapp.adapters.PostAdapter;
-    import com.example.chatapp.databinding.ActivityDisplayBinding;
     import com.example.chatapp.models.Post;
     import com.example.chatapp.utilities.Constants;
     import com.example.chatapp.utilities.PreferenceManager;
@@ -22,7 +20,7 @@
     import java.util.Locale;
 
 
-    public class ForumDisplayActivity extends AppCompatActivity {
+    public class DisplayPostsActivity extends AppCompatActivity {
 
         private ActivityDisplayBinding binding;
         private FirebaseFirestore database;
@@ -77,6 +75,6 @@
         }
         private void setListeners(){
             binding.imageBack.setOnClickListener(v -> onBackPressed());
-            binding.fabNewChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CreateForumActivity.class)));
+            binding.fabNewChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CreatePostActivity.class)));
         }
     }

@@ -17,13 +17,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".activities.ForumDisplayActivity"
+            android:name=".activities.DisplayPostsActivity"
             android:exported="false" />
         <activity
             android:name=".adapters.PostAdapter"
             android:exported="false" />
         <activity
-            android:name=".activities.CreateForumActivity"
+            android:name=".activities.CreatePostActivity"
             android:exported="false" />
         <activity
             android:name=".activities.AboutUsActivity"
