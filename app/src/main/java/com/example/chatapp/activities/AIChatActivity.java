@@ -111,7 +111,7 @@ public class AIChatActivity extends AppCompatActivity {
 
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/completions")
-                .header("Authorization","Bearer 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")
+                .header("Authorization","Bearer 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")
                 .post(body)
                 .build();
         client.newCall(request).enqueue(new Callback() {

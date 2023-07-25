@@ -14,8 +14,13 @@
     import com.google.firebase.firestore.FirebaseFirestore;
     import com.google.firebase.firestore.QueryDocumentSnapshot;
 
+
+    import java.text.SimpleDateFormat;
     import java.util.ArrayList;
+    import java.util.Date;
     import java.util.List;
+    import java.util.Locale;
+
 
 
     public class DisplayPostsActivity extends AppCompatActivity {
@@ -49,6 +54,9 @@
                                 post.title = queryDocumentSnapshot.getString(Constants.KEY_TITLE);
                                 post.content = queryDocumentSnapshot.getString(Constants.KEY_CONTENT);
                                 post.image = queryDocumentSnapshot.getString(Constants.KEY_IMAGE);
+                                post.dateTime = getReadableDateTime(queryDocumentSnapshot.getDate(Constants.KEY_TIMESTAMP));
+                                post.dateObject = queryDocumentSnapshot.getDate(Constants.KEY_TIMESTAMP);
+
                                 posts.add(post);
                             }
                             if (posts.size()>0){
@@ -61,6 +69,11 @@
                         }
                     });
         }
+
+        private String getReadableDateTime(Date date) {
+            return new SimpleDateFormat("MMMM dd, yyyy - hh:mm a", Locale.getDefault()).format(date);
+        }
+
         private void showErrorMessage() {
             binding.textErrorMessage.setText(String.format("%$, ","No posts available"));
         }

@@ -13,7 +13,8 @@ import java.util.List;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
-    private List<Post> posts;
+    private final List<Post> posts;
+    private final Bitmap posterImageProfile;
 
     public PostAdapter(List<Post> posts) {
         this.posts = posts;
@@ -59,6 +60,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         void setPost(Post post){
             binding.textTitle.setText(post.title);
             binding.textContent.setText(post.content);
+            binding.textDateTime.setText(post.dateTime);
+            //binding.imageProfile.setImageBitmap();
         }
     }
 }
