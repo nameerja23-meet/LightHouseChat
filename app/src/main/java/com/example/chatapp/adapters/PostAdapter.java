@@ -1,5 +1,7 @@
 package com.example.chatapp.adapters;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -8,21 +10,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.chatapp.databinding.ItemContainerPostBinding;
 import com.example.chatapp.models.Post;
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.binary.Base64;
 
 import java.util.List;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
     private final List<Post> posts;
-    private final Bitmap posterImageProfile;
+
 
     public PostAdapter(List<Post> posts) {
         this.posts = posts;
-    }
-
-    public void setPosts(List<Post> posts) {
-        this.posts = posts;
-        notifyDataSetChanged();
     }
 
     @NonNull
@@ -61,7 +59,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
             binding.textTitle.setText(post.title);
             binding.textContent.setText(post.content);
             binding.textDateTime.setText(post.dateTime);
-            //binding.imageProfile.setImageBitmap();
+            binding.imageProfile.setImageBitmap(getUserImage(post.image));
         }
+    }
+
+    private Bitmap getUserImage(String encodedImage) {
+        byte[] bytes = Base64.decodeBase64(encodedImage);
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
 }

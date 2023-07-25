@@ -42,6 +42,7 @@
             setListeners();
         }
 
+
         private void retrievePosts() {
             database.collection(Constants.KEY_COLLECTION_POSTS)
                     .get()
