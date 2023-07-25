@@ -6,6 +6,7 @@
     import androidx.appcompat.app.AppCompatActivity;
 
     import com.example.chatapp.databinding.ActivityCreateForumBinding;
+    import com.example.chatapp.models.User;
     import com.example.chatapp.utilities.Constants;
     import com.example.chatapp.utilities.PreferenceManager;
     import com.google.firebase.firestore.FirebaseFirestore;
@@ -16,6 +17,7 @@
     public class CreatePostActivity extends AppCompatActivity {
         private ActivityCreateForumBinding binding;
         private PreferenceManager preferenceManager;
+        //private User postUser;
         FirebaseFirestore database;
 
         @Override
@@ -26,6 +28,7 @@
             preferenceManager = new PreferenceManager(getApplicationContext());
             database = FirebaseFirestore.getInstance();
             setListeners();
+            //loadPosterDetails();
 
         }
 
@@ -60,4 +63,7 @@
             });
             binding.imageBack.setOnClickListener(v -> onBackPressed());
         }
+//        private void loadPosterDetails() {
+//            postUser = (User) getIntent().getSerializableExtra(Constants.KEY_USER);
+//        }
     }
