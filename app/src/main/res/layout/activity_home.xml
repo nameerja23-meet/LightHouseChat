@@ -94,7 +94,7 @@
                 android:background="@drawable/round_button"
                 android:contentDescription=""
                 app:backgroundTint="@null"
-                app:srcCompat="@drawable/chat_icon"
+                app:srcCompat="@drawable/ic_chat"
                 tools:ignore="SpeakableTextPresentCheck" />
 
 
@@ -147,7 +147,7 @@
                 android:background="@drawable/round_button"
                 android:contentDescription=""
                 app:backgroundTint="@null"
-                app:srcCompat="@drawable/about_us_icon"
+                app:srcCompat="@drawable/ic_about_us"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
             <ImageButton

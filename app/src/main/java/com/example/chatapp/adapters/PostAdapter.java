@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.chatapp.databinding.ItemPostBinding;
+import com.example.chatapp.databinding.ItemContainerPostBinding;
 import com.example.chatapp.models.Post;
 
 import java.util.List;
@@ -27,12 +27,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     @NonNull
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemPostBinding itemPostBinding = ItemPostBinding.inflate(
+        ItemContainerPostBinding itemContainerPostBinding = ItemContainerPostBinding.inflate(
                 LayoutInflater.from(parent.getContext()),
                 parent,
                 false
         );
-        return new PostAdapter.PostViewHolder(itemPostBinding);
+        return new PostAdapter.PostViewHolder(itemContainerPostBinding);
     }
 
     @Override
@@ -48,11 +48,11 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
 
     class PostViewHolder extends RecyclerView.ViewHolder {
-        ItemPostBinding binding;
+        ItemContainerPostBinding binding;
 
-        public PostViewHolder(ItemPostBinding itemPostBinding) {
-            super(itemPostBinding.getRoot());
-            binding = itemPostBinding;
+        public PostViewHolder(ItemContainerPostBinding itemContainerPostBinding) {
+            super(itemContainerPostBinding.getRoot());
+            binding = itemContainerPostBinding;
 
         }
 
