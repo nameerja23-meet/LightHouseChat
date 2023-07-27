@@ -9,6 +9,11 @@
     tools:context=".activities.HomeActivity">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/imageProfile"
         android:layout_width="@dimen/_30sdp"
@@ -61,6 +66,8 @@
         android:background="@drawable/background_content_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageProfile">
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -188,14 +195,22 @@
                 android:fontFamily="@font/average_sans"
                 android:gravity="center"
                 android:text="FORUM"
-                android:textColor="@color/black"
-                android:textSize="50px"></TextView>
+                android:textColor="@color/black"/>
 
 
         </RelativeLayout>
 
         </LinearLayout>
     </FrameLayout>
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/NavigationBar"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintBaseline_toEndOf="parent"
+
+                app:menu="@menu/navi_bar"/>
+    </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,6 +8,7 @@
     android:background="@color/primary"
     tools:context=".activities.ChatActivity">
 
+
     <View
         android:id="@+id/viewBackground"
         android:layout_width="match_parent"
@@ -99,6 +100,10 @@
         app:layout_constraintEnd_toEndOf="@id/viewBackground"
         app:layout_constraintStart_toStartOf="@id/viewBackground"
         app:layout_constraintTop_toTopOf="@id/viewBackground"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/layoutSend"
@@ -143,4 +148,13 @@
         app:layout_constraintEnd_toStartOf="@id/layoutSend"
         app:layout_constraintStart_toStartOf="parent"/>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/NavigationBar"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBaseline_toEndOf="parent"
+
+        app:menu="@menu/navi_bar"/>
+</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

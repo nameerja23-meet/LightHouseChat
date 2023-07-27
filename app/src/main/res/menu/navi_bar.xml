@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Back"
+            android:id="@+id/back_naviBar"
+          android:icon="@drawable/background_back_navigationBar"/>
+    <item android:title="Home"
+        android:id="@+id/home_naviBar"
+        android:icon="@drawable/background_home_navigationBar"/>
+    <item android:title="About us"
+        android:id="@+id/about_us_naviBar"
+        android:icon="@drawable/background_about_us_navigationBar"/>
+</menu>

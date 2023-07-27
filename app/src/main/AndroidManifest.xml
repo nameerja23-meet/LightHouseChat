@@ -17,6 +17,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activities.SplashScreenActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".activities.ForumDisplayActivity"
             android:exported="false" />
         <activity
@@ -47,13 +57,8 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SignInActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false"
+             android:windowSoftInputMode="adjustResize">
         </activity>
         <activity
             android:name=".activities.AIChatActivity"
@@ -62,9 +67,8 @@
             android:name=".models.AIMessage"
             android:exported="false" />
         <activity
-        android:name=".adapters.MessageAdapter"
-        android:exported="false" />
-
+            android:name=".adapters.MessageAdapter"
+            android:exported="false" />
 
         <service
             android:name=".firebase.MessagingService"
@@ -73,6 +77,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
